@@ -43,5 +43,29 @@ e1
 class(e1)
 
 
+#熟悉R裡面的基本物件(3)
+#變數(Variable)層物件中有幾個重要的函數來描述它的基本資料，這裡我們要學習一下
+#函數「length()」可以查詢該向量的長度
+
+#函數「levels()」可以查詢因子向量的類別種類
+
+d = c("A", "B", "C", "C", "B")
+class(d)
+d1 = as.factor(d)
+d1
+
+n = length(d1)
+n
+
+categories = levels(d1)
+categories
+#在這邊我們介紹第一個函數組合所產生的效果，對於一個因子物件，如果我們把函數「length()」與函數「levels()」做結合，看看會發生什麼事情
+categories = levels(d1)
+n.categories = length(categories)
+n.categories
+
+# 用下列這串意思一樣
+n.categories = length(levels(d1))
+n.categories
 
 
